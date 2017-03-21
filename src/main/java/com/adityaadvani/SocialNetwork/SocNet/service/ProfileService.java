@@ -91,9 +91,9 @@ public class ProfileService {
 		}
 		
 		myCommentsInMessages = new ArrayList<>(profiles.get(pName).getMyCommentsInMessage());
-		for(long l: myCommentsInMessages){
-			System.out.println("comment present in: " + l);
-		}
+//		for(long l: myCommentsInMessages){
+		//	System.out.println("comment present in: " + l);
+//		}
 		
 		for(long msgId : myCommentsInMessages){
 			if(!messages.containsKey(msgId)) continue;
@@ -104,7 +104,7 @@ public class ProfileService {
 			for(long comId : comIds){
 				Comment c = coms.get(comId);
 				if(c.getAuthor().equals(pName)){
-					System.out.println(pName + " has a comment in message id " + msgId + " at commentId " + comId);
+//					System.out.println(pName + " has a comment in message id " + msgId + " at commentId " + comId);
 					cs.removeComment(msgId, comId);
 				}
 			}

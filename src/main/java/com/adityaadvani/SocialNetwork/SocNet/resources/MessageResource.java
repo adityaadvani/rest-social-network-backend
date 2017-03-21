@@ -42,8 +42,8 @@ public class MessageResource {
 	@Path("/{messageId}")
 	public Message updateMessage(@PathParam("messageId") long id, Message message){
 		message.setId(id);
-		System.out.println("message id: " + message.getId());
-		System.out.println("Sending to ms.updateMessage");
+//		System.out.println("message id: " + message.getId());
+//		System.out.println("Sending to ms.updateMessage");
 		return ms.updateMessage(message);
 	}
 	

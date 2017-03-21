@@ -59,14 +59,14 @@ public class CommentService {
 	}
 	
 	public Comment removeComment(long messageId, long commentId) {
-		System.out.println("in remove comment");
+//		System.out.println("in remove comment");
 		if(!messages.containsKey(messageId)) return null;
-		System.out.println("message exists");
+//		System.out.println("message exists");
 		Map<Long, Comment> comments = messages.get(messageId).getComments();
 		if(!comments.containsKey(commentId)) return null;
-		System.out.println("comment found");
+//		System.out.println("comment found");
 		Comment com = comments.remove(commentId);
-		System.out.println("comment deleted");
+//		System.out.println("comment deleted");
 		boolean moreComsByAuthor = false;
 		for(long l : comments.keySet()){
 			Comment c = comments.get(l);
